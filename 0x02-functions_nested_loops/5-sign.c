@@ -1,19 +1,3 @@
-iamyinka
-/
-alx-low_level_programming
-Public
-Code
-Issues
-Pull requests
-Actions
-Projects
-Security
-Insights
-alx-low_level_programming/0x02-functions_nested_loops/5-sign.c
-@iamyinka
-iamyinka Finish Task
- 1 contributor
-Executable File  26 lines (25 sloc)  407 Bytes
 #include "main.h"
 /**
  * print_sign - Print the sign of a number
