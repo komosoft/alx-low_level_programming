@@ -1,19 +1,3 @@
-iamyinka
-/
-alx-low_level_programming
-Public
-Code
-Issues
-Pull requests
-Actions
-Projects
-Security
-Insights
-alx-low_level_programming/0x04-more_functions_nested_loops/5-more_numbers.c
-@iamyinka
-iamyinka Finish Task
- 1 contributor
-Executable File  26 lines (23 sloc)  338 Bytes
 #include "main.h"
 
 /**
