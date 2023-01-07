@@ -1,4 +1,21 @@
-#ifndef _MAIN_H_
-#define _MAIN_H_
+#ifndef MAIN_H
 
-#endif
+               
+
+#define MAIN_H
+
+               
+
+               
+
+int _putchar(char c);
+
+               
+
+int _atoi(char *s);
+
+               
+
+               
+
+#endiff

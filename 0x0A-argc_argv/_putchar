@@ -12,15 +12,11 @@
 
                
 
- * main - prints the name of the program
+ * _putchar - writes the character c to stdout
 
                
 
- * @argc: number of arguments
-
-               
-
- * @argv: array of arguments
+ * @c:Ther character to print
 
                
 
@@ -28,7 +24,11 @@
 
                
 
- * Return: Always 0 (Success)
+ * Return: On success 1.
+
+               
+
+ * On error, -1 is returned and errno is set appropriately.
 
                
 
@@ -36,7 +36,7 @@
 
                
 
-int main(int argc __attribute__((unused)), char *argv[])
+int _putchar(char c)
 
                
 
@@ -44,13 +44,7 @@ int main(int argc __attribute__((unused)), char *argv[])
 
                
 
-        printf("%s\n", *argv);
-
-               
-
-               
-
-        return (0);
+return (write(1, &c, 1));
 
                
 
