@@ -1,52 +1,27 @@
 #include "lists.h"
 
 /**
- * insert_nodeint_at_index - inserts a new node
- * at a given position.
- * @head: head of a list.
- * @idx: index of the list where the new node is
- * added.
- * @n: integer element.
+ * reverse_listint - reverses a listint_t linked list.
+ * @head: double pointer to the start of the list
  *
- * Return: the address of the new node, or NULL if it
- * failed.
+ * Return: a pointer to the first node of the reversed list
  */
-
-listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
+listint_t *reverse_listint(listint_t **head)
 {
-	unsigned int i;
-	listint_t *new;
-	listint_t *h;
+	listint_t *previous, *next;
 
-	h = *head;
-
-	if (idx != 0)
-	{
-		for (i = 0; i < idx - 1 && h != NULL; i++)
-		{
-			h = h->next;
-		}
-	}
-
-	if (h == NULL && idx != 0)
+	if (head == NULL || *head == NULL)
 		return (NULL);
-
-	new = malloc(sizeof(listint_t));
-	if (new == NULL)
-		return (NULL);
-
-	new->n = n;
-
-	if (idx == 0)
+	if ((*head)->next == NULL)
+		return (*head);
+	previous = NULL;
+	while (*head != NULL)
 	{
-		new->next = *head;
-		*head = new;
+		next = (*head)->next;
+		(*head)->next = previous;
+		previous = *head;
+		*head = next;
 	}
-	else
-	{
-		new->next = h->next;
-		h->next = new;
-	}
-
-	return (new);
+	*head = previous;
+	return (*head);
 }
